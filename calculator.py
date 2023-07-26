@@ -1,11 +1,17 @@
-#welcoming message and first on screen
 print('Welcome user')
-name = input("What is your name? ").strip().title()
-print(f'Welcome, {name}')
+#welcoming message and first on screen
+while True:
+    name = input("What is your name? ").strip().title()
+    if name =='':
+        print('Invalid input!')
+        continue
+    else:
+        print(f'Welcome, {name}')
+        break
 
 while True:
     #looping point
-    point= input('Do you wish to use the calculator (yes/no)').lower().strip()
+    point= input('Do you wish to use the calculator? (yes/no)').lower().strip()
     if point =='no':
         break
 
@@ -14,12 +20,12 @@ while True:
     ask_operation = input()
     #multiplication
     if ask_operation == '1' or ask_operation =='multiplication' :
-         x = float(input("enter number to multiply: "))
-         y = float(input('input the number to multiply by: '))
+         x = (input("Enter number to multiply: "))
+         y = (input('Enter the number to multiply by: '))
          try:
             x1 = float(x)
             y1 = float(y)
-            print(x1 * y1)
+            print(f'{name},{x1} multiplied by {y1} is: ',x1 * y1)
          except: print("invalid input")
 
     #power
@@ -29,8 +35,8 @@ while True:
          try:
           x2_1 = float(x2)
           y2_1 = float(y2)
-          print(pow(x2_1,y2_1))
-         except: print('invalid input')
+          print(f'{x2_1} raised to the power of {y2_1} is: ',pow(x2_1,y2_1))
+         except: print('Please enter numerical values')
 
     #division
     elif ask_operation == '3' or ask_operation == 'division' :
@@ -50,7 +56,7 @@ while True:
              x4_1 = float(x4)
              y4_1 = float(y4)
              print(f'{x4_1} plus{y4_1} is:',x4_1 + y4_1)
-         except: print("please enter numerical values")
+         except: print("Please enter numerical values")
 
     #subrtaction
     elif ask_operation =='5' or ask_operation == 'subtraction':
