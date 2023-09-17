@@ -16,7 +16,7 @@ while True:
         break
 
     #Resquesting operation
-    print('Which operation would you like to perfom? \n 1: multiplication \n 2: power \n 3: division \n 4: addition \n 5: subtraction \n')
+    print('Which operation would you like to perfom? \n 1: multiplication \n 2: power \n 3: division \n 4: addition \n 5: subtraction ')
     ask_operation = input()
     #multiplication
     if ask_operation == '1' or ask_operation =='multiplication' :
